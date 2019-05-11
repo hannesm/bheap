@@ -57,4 +57,6 @@ module Make(X: Ordered) : sig
 
   val fold : (X.t -> 'a -> 'a) -> t -> 'a -> 'a
 
+  val size : t -> int
+
 end

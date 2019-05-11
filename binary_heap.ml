@@ -30,6 +30,8 @@ module Make(X : Ordered) = struct
 
   type t = { mutable size : int; mutable data : X.t array }
 
+  let size { size ; _ } = size
+
   (* When [create n] is called, we cannot allocate the array, since there is
      no known value of type [X.t]; we'll wait for the first addition to
      do it, and we remember this situation with a negative size. *)
